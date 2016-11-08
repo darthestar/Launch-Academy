@@ -1,0 +1,12 @@
+<h1>
+  <% @movies.info.each do |movie| %>
+    This is the actor page of <%= movie["title"]%>
+    <% end %>
+</h1>
+    <h3> Movie Details </h3>
+    <ul>
+    <% @movies_info.each do |movie| %>
+    <li><%= movie["title"] %> year:<%= movie["year"] %> genre: <%= movie["genre_id"] %>< studio: %= movie["studio_id"] %></li>
+    <%end %>
+  </ul>
+<a href="/actors">All Actors</a>

@@ -1,0 +1,13 @@
+<h1>
+  <% @actor_movies_and_characters.each do |actor| %>
+    This is the actor page of <%= actor["name"]%>
+    <% end %>
+</h1>
+    <h3> Actor Details </h3>
+    <ul>
+    <% @actor_movies_and_characters.each do |actor| %>
+    <li><%= actor["character"] %> : <%= actor["title"] %></li>
+    <li><a href="/movies/<%= actor['id'] %>"><%= actor['title']%></a></li>
+    <%end %>
+  </ul>
+<a href="/actors">All Actors</a>
